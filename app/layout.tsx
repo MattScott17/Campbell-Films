@@ -13,6 +13,15 @@ const raleway = Raleway({
 export const metadata: Metadata = {
   title: "Campbell Films | Film Photography & Super 8 Videography",
   description: "Film photography and Super 8 videography based in Southern California. Capturing authentic, timeless moments for weddings, elopements, and lifestyle sessions.",
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png' },
+    ],
+  },
 };
 
 export default function RootLayout({
