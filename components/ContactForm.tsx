@@ -9,13 +9,34 @@ export default function ContactForm() {
     phone: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Add form submission logic here (e.g., email service, API endpoint)
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! I'll be in touch soon.");
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setStatus("submitting");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("https://formspree.io/f/xwpranzq", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        setStatus("error");
+        setErrorMessage("Something went wrong. Please try again or email me directly at zoe@filmsbycampbell.com");
+      }
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage("Unable to send message. Please try again or email me directly at zoe@filmsbycampbell.com");
+    }
   };
 
   const handleChange = (
@@ -101,11 +122,30 @@ export default function ContactForm() {
         />
       </div>
 
+      {/* Success Message */}
+      {status === "success" && (
+        <div className="p-4 bg-sage-100 border border-sage-300 rounded-sm">
+          <p className="text-olive-800 font-medium text-center">
+            ✓ Thank you for your message! I&apos;ll be in touch soon.
+          </p>
+        </div>
+      )}
+
+      {/* Error Message */}
+      {status === "error" && (
+        <div className="p-4 bg-coral-100 border border-coral-300 rounded-sm">
+          <p className="text-coral-800 text-sm text-center">
+            {errorMessage}
+          </p>
+        </div>
+      )}
+
       <button
         type="submit"
-        className="w-full bg-coral-500 text-peach-50 py-4 rounded-sm hover:bg-coral-600 transition-colors font-medium tracking-wide uppercase text-sm"
+        disabled={status === "submitting"}
+        className="w-full bg-coral-500 text-peach-50 py-4 rounded-sm hover:bg-coral-600 transition-colors font-medium tracking-wide uppercase text-sm disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Send Message
+        {status === "submitting" ? "Sending..." : "Send Message"}
       </button>
     </form>
   );

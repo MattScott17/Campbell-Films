@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: '/favicon.png',
+        url: '/OpenGraphImage_CF.png',
         width: 1200,
         height: 630,
         alt: 'Contact Campbell Films',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact | Campbell Films",
     description: "Let's capture your story on film. Get in touch about wedding, elopement, or lifestyle photography with Super 8 and 35mm film.",
-    images: ['/favicon.png'],
+    images: ['/OpenGraphImage_CF.png'],
   },
   alternates: {
     canonical: "https://filmsbycampbell.com/contact",
