@@ -1,4 +1,33 @@
+import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Let's capture your story on film. Get in touch about wedding, elopement, or lifestyle photography with Super 8 and 35mm film.",
+  openGraph: {
+    title: "Contact | Campbell Films",
+    description: "Let's capture your story on film. Get in touch about wedding, elopement, or lifestyle photography with Super 8 and 35mm film.",
+    url: "https://filmsbycampbell.com/contact",
+    type: "website",
+    images: [
+      {
+        url: '/favicon.png',
+        width: 1200,
+        height: 630,
+        alt: 'Contact Campbell Films',
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact | Campbell Films",
+    description: "Let's capture your story on film. Get in touch about wedding, elopement, or lifestyle photography with Super 8 and 35mm film.",
+    images: ['/favicon.png'],
+  },
+  alternates: {
+    canonical: "https://filmsbycampbell.com/contact",
+  },
+};
 
 export default function ContactPage() {
   return (
