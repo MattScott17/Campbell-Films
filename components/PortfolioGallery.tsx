@@ -8,16 +8,18 @@ export default function PortfolioGallery({ category }: PortfolioGalleryProps) {
   const lifestyleImages = Array.from({ length: 37 }, (_, i) => ({
     id: i + 1,
     src: `/images/lifestyle/Lifestyle_${i + 1}.JPG`,
-    alt: `Lifestyle photo ${i + 1}`,
+    alt: `Film photography lifestyle portrait ${i + 1} - Campbell Films Southern California`,
   }));
 
   const weddingVideos = [
-    { id: 1, src: "/videos/lifestyle/wedding/Wedding_Short_1.mov", alt: "Wedding video 1" },
-    { id: 2, src: "/videos/lifestyle/wedding/Wedding_Short_2.mov", alt: "Wedding video 2" },
-    { id: 3, src: "/videos/lifestyle/wedding/Wedding_Short_3.mov", alt: "Wedding video 3" },
-    { id: 4, src: "/videos/lifestyle/wedding/Wedding_Short_4.mov", alt: "Wedding video 4" },
-    { id: 5, src: "/videos/lifestyle/wedding/WeddingMovie_1.MP4", alt: "Wedding movie 1" },
-    { id: 6, src: "/videos/lifestyle/wedding/WeddingMovie_2.MP4", alt: "Wedding movie 2" },
+    { id: 1, src: "/videos/lifestyle/wedding/Wedding_Short_1.mov", type: "video/quicktime", alt: "Super 8 wedding film - Campbell Films" },
+    { id: 2, src: "/videos/lifestyle/wedding/Wedding_Short_2.mov", type: "video/quicktime", alt: "Nostalgic Super 8 wedding videography" },
+    { id: 3, src: "/videos/lifestyle/wedding/Wedding_Short_3.mov", type: "video/quicktime", alt: "Analog wedding film capturing authentic moments" },
+    { id: 4, src: "/videos/lifestyle/wedding/Wedding_Short_4.mov", type: "video/quicktime", alt: "Super 8 film wedding cinematography" },
+    { id: 5, src: "/videos/lifestyle/wedding/Wedding_Short_5.mov", type: "video/quicktime", alt: "Timeless Super 8 wedding video" },
+    { id: 6, src: "/videos/lifestyle/wedding/Wedding_Short_6.mov", type: "video/quicktime", alt: "Film wedding videography Southern California" },
+    { id: 7, src: "/videos/lifestyle/wedding/WeddingMovie_1.MP4", type: "video/mp4", alt: "Full Super 8 wedding film by Campbell Films" },
+    { id: 8, src: "/videos/lifestyle/wedding/WeddingMovie_2.MP4", type: "video/mp4", alt: "Complete wedding film on Super 8" },
   ];
 
   if (category === 'lifestyle') {
@@ -44,9 +46,15 @@ export default function PortfolioGallery({ category }: PortfolioGalleryProps) {
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {weddingVideos.map((video) => (
-          <div key={video.id} className="aspect-video bg-black rounded-sm overflow-hidden">
-            <video controls className="w-full h-full object-cover">
-              <source src={video.src} />
+          <div key={video.id} className="aspect-video bg-black rounded-sm overflow-hidden group">
+            <video
+              controls
+              className="w-full h-full object-cover"
+              preload="metadata"
+              aria-label={video.alt}
+            >
+              <source src={video.src} type={video.type} />
+              Your browser does not support the video tag.
             </video>
           </div>
         ))}

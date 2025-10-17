@@ -9,7 +9,8 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/videos/lifestyle/wedding/Wedding_Short_1.mov" type="video/mp4" />
+        <source src="/videos/lifestyle/wedding/Wedding_Short_1.mov" type="video/quicktime" />
+        <source src="/videos/lifestyle/wedding/WeddingMovie_1.MP4" type="video/mp4" />
       </video>
 
       {/* Overlay */}

@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export default function Gallery() {
   const images = [
-    { id: 1, src: "/images/lifestyle/Lifestyle_1.JPG", alt: "A woman in a white dress standing in a field of tall grass." },
-    { id: 2, src: "/images/lifestyle/Lifestyle_5.JPG", alt: "A couple embracing on a beach at sunset." },
-    { id: 3, src: "/images/lifestyle/Lifestyle_8.JPG", alt: "A woman sitting on a vintage car, smiling." },
-    { id: 4, src: "/images/lifestyle/Lifestyle_12.JPG", alt: "A close-up of a woman's hands holding a bouquet of wildflowers." },
-    { id: 5, src: "/images/lifestyle/Lifestyle_18.JPG", alt: "A couple walking hand-in-hand through a forest." },
-    { id: 6, src: "/images/lifestyle/Lifestyle_21.JPG", alt: "A woman laughing while her partner whispers in her ear." },
-    { id: 7, src: "/images/lifestyle/Lifestyle_28.JPG", alt: "A silhouette of a couple against a vibrant sunset." },
-    { id: 8, src: "/images/lifestyle/Lifestyle_35.JPG", alt: "A woman's face partially obscured by a sunhat." },
+    { id: 1, src: "/images/lifestyle/Lifestyle_3.JPG", alt: "Film photography lifestyle portrait - Campbell Films" },
+    { id: 2, src: "/images/lifestyle/Lifestyle_7.JPG", alt: "Candid lifestyle photography captured on 35mm film" },
+    { id: 3, src: "/images/lifestyle/Lifestyle_12.JPG", alt: "Authentic moments captured on film - Southern California photographer" },
+    { id: 4, src: "/images/lifestyle/Lifestyle_15.JPG", alt: "Nostalgic film photography lifestyle session" },
+    { id: 5, src: "/images/lifestyle/Lifestyle_21.JPG", alt: "Timeless film photography by Campbell Films" },
+    { id: 6, src: "/images/lifestyle/Lifestyle_28.JPG", alt: "Natural light film photography lifestyle portraits" },
+    { id: 7, src: "/images/lifestyle/Lifestyle_31.JPG", alt: "Analog photography capturing real moments and emotions" },
+    { id: 8, src: "/images/lifestyle/Lifestyle_35.JPG", alt: "Film photography lifestyle session in Southern California" },
   ];
 
   return (
