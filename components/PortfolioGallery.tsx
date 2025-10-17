@@ -1,46 +1,58 @@
+import Image from 'next/image';
+
 interface PortfolioGalleryProps {
   category: "wedding" | "lifestyle";
 }
 
 export default function PortfolioGallery({ category }: PortfolioGalleryProps) {
-  // Placeholder data - replace with actual portfolio images
-  const weddingImages = Array.from({ length: 12 }, (_, i) => ({
+  const lifestyleImages = Array.from({ length: 37 }, (_, i) => ({
     id: i + 1,
-    alt: `Wedding photo ${i + 1}`,
-  }));
-
-  const lifestyleImages = Array.from({ length: 12 }, (_, i) => ({
-    id: i + 1,
+    src: `/images/lifestyle/Lifestyle_${i + 1}.JPG`,
     alt: `Lifestyle photo ${i + 1}`,
   }));
 
-  const images = category === "wedding" ? weddingImages : lifestyleImages;
+  const weddingVideos = [
+    { id: 1, src: "/videos/lifestyle/wedding/Wedding_Short_1.mov", alt: "Wedding video 1" },
+    { id: 2, src: "/videos/lifestyle/wedding/Wedding_Short_2.mov", alt: "Wedding video 2" },
+    { id: 3, src: "/videos/lifestyle/wedding/Wedding_Short_3.mov", alt: "Wedding video 3" },
+    { id: 4, src: "/videos/lifestyle/wedding/Wedding_Short_4.mov", alt: "Wedding video 4" },
+    { id: 5, src: "/videos/lifestyle/wedding/WeddingMovie_1.MP4", alt: "Wedding movie 1" },
+    { id: 6, src: "/videos/lifestyle/wedding/WeddingMovie_2.MP4", alt: "Wedding movie 2" },
+  ];
 
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {images.map((image) => (
-        <div
-          key={image.id}
-          className="aspect-[4/5] bg-peach-200 rounded-sm overflow-hidden group cursor-pointer"
-        >
-          {/* Placeholder - replace with actual images */}
+  if (category === 'lifestyle') {
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {lifestyleImages.map((image) => (
           <div
-            className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${
-              category === "wedding"
-                ? "bg-gradient-to-br from-peach-200 via-gold-200 to-sage-200"
-                : "bg-gradient-to-br from-sage-200 via-dustyBlue-200 to-mustard-200"
-            }`}
-          />
-          {/* In production, use:
-          <Image
-            src={`/images/${category}/${image.id}.jpg`}
-            alt={image.alt}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          */}
-        </div>
-      ))}
-    </div>
-  );
+            key={image.id}
+            className="aspect-[4/5] bg-peach-200 rounded-sm overflow-hidden group cursor-pointer"
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  if (category === 'wedding') {
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {weddingVideos.map((video) => (
+          <div key={video.id} className="aspect-video bg-black rounded-sm overflow-hidden">
+            <video controls className="w-full h-full object-cover">
+              <source src={video.src} />
+            </video>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  return null;
 }

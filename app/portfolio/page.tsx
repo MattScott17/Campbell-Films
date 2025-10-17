@@ -4,7 +4,7 @@ import { useState } from "react";
 import PortfolioGallery from "@/components/PortfolioGallery";
 
 export default function PortfolioPage() {
-  const [activeTab, setActiveTab] = useState<"wedding" | "lifestyle">("wedding");
+  const [activeTab, setActiveTab] = useState<"wedding" | "lifestyle">("lifestyle");
 
   return (
     <div className="pt-24 pb-20 px-6">

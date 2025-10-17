@@ -1,19 +1,16 @@
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background - placeholder for now */}
-      <div className="absolute inset-0 bg-gradient-to-br from-peach-200 via-gold-200 to-sage-200">
-        {/* In production, replace with: */}
-        {/* <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/video/hero.mp4" type="video/mp4" />
-        </video> */}
-      </div>
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videos/lifestyle/wedding/Wedding_Short_1.mov" type="video/mp4" />
+      </video>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-olive-900/30" />
