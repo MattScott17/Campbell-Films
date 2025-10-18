@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import PortfolioGallery from "@/components/PortfolioGallery";
 
 export default function PortfolioPage() {
   const [activeTab, setActiveTab] = useState<"wedding" | "lifestyle">("lifestyle");
@@ -38,9 +37,6 @@ export default function PortfolioPage() {
             </button>
           </div>
         </div>
-
-        {/* Gallery */}
-        <PortfolioGallery category={activeTab} />
       </div>
     </div>
   );

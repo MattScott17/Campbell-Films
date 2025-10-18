@@ -5,7 +5,7 @@ interface PortfolioGalleryProps {
 }
 
 export default function PortfolioGallery({ category }: PortfolioGalleryProps) {
-  const lifestyleImages = Array.from({ length: 37 }, (_, i) => ({
+  const lifestyleImages = Array.from({ length: 36 }, (_, i) => ({
     id: i + 1,
     src: `/images/lifestyle/Lifestyle_${i + 1}.JPG`,
     alt: `Film photography lifestyle portrait ${i + 1} - Campbell Films Southern California`,
