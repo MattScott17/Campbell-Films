@@ -14,7 +14,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden z-10">
       {/* Video Background */}
       <video
         ref={videoRef}
@@ -23,14 +23,14 @@ export default function Hero() {
         muted
         playsInline
         preload="auto"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover z-0"
       >
         <source src="/videos/HeroVideo/HeroVid.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-olive-900/30" />
+      <div className="absolute inset-0 bg-olive-900/30 z-1" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6">
@@ -43,7 +43,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="animate-bounce">
           <svg
             className="w-6 h-6 text-peach-50"
@@ -57,7 +57,7 @@ export default function Hero() {
             <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

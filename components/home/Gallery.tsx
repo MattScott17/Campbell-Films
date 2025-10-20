@@ -9,7 +9,7 @@ export default function Gallery() {
     { id: 5, src: "/images/lifestyle/Lifestyle_21.JPG", alt: "Timeless film photography by Campbell Films" },
     { id: 6, src: "/images/lifestyle/Lifestyle_28.JPG", alt: "Natural light film photography lifestyle portraits" },
     { id: 7, src: "/images/lifestyle/Lifestyle_31.JPG", alt: "Analog photography capturing real moments and emotions" },
-    { id: 8, src: "/images/lifestyle/Lifestyle_35.JPG", alt: "Film photography lifestyle session in Southern California" },
+    { id: 7, src: "/images/lifestyle/Lifestyle_35.JPG", alt: "Analog photography capturing real moments and emotions" }
   ];
 
   return (
@@ -22,7 +22,7 @@ export default function Gallery() {
           {images.map((image) => (
             <div
               key={image.id}
-              className="aspect-[4/5] bg-peach-200 rounded-sm overflow-hidden group cursor-pointer"
+              className="relative aspect-[4/5] bg-peach-200 rounded-sm overflow-hidden group cursor-pointer"
             >
               <Image
                 src={image.src}
