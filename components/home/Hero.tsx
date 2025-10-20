@@ -1,16 +1,32 @@
+"use client";
+
+import { useRef, useEffect } from 'react';
+
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.log("Video autoplay failed:", error);
+      });
+    }
+  }, []);
+
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/videos/lifestyle/wedding/Wedding_Short_1.mov" type="video/quicktime" />
-        <source src="/videos/lifestyle/wedding/WeddingMovie_1.MP4" type="video/mp4" />
+        <source src="/videos/HeroVideo/HeroVid.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
 
       {/* Overlay */}
