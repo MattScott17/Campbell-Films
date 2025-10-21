@@ -28,7 +28,7 @@ export default function Navigation() {
       const scrollPosition = window.scrollY;
       const viewportHeight = window.innerHeight;
 
-      if (scrollPosition > viewportHeight * 0.3) {
+      if (scrollPosition > viewportHeight * 0.02) {
         setIsVisible(true);
       } else {
         setIsVisible(false);

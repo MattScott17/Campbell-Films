@@ -14,7 +14,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden z-10">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden z-10 bg-black">
       {/* Video Background */}
       <video
         ref={videoRef}
@@ -30,11 +30,11 @@ export default function Hero() {
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-olive-900/30 z-1" />
+      <div className="absolute inset-0 bg-olive-900/30 z-1 pointer-events-none" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-peach-50 mb-6 animate-fade-in drop-shadow-lg">
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif text-peach-50 mb-6 animate-fade-in drop-shadow-lg">
           Campbell Films
         </h1>
         <p className="text-xl md:text-2xl text-peach-100 tracking-wide drop-shadow">
@@ -43,7 +43,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="animate-bounce">
           <svg
             className="w-6 h-6 text-peach-50"
@@ -57,7 +57,7 @@ export default function Hero() {
             <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 }
