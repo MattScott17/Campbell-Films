@@ -15,7 +15,7 @@ export default function Gallery() {
   return (
     <section className="py-20 px-6 bg-sage-50">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-serif text-coral-600 mb-12 text-center">
+        <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-coral-600 mb-12 text-center">
           Recent Work
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

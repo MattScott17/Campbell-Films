@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           {/* Brand */}
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-serif text-coral-600 mb-2">
+            <h3 className="text-4xl font-serif text-coral-600 mb-2">
               Campbell Films
             </h3>
             <p className="text-sm text-olive-700">

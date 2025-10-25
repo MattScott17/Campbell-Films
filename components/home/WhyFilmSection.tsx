@@ -30,6 +30,13 @@ export default function WhyFilmSection() {
     >
       <div className="max-w-5xl mx-auto space-y-32">
 
+        {/* Main Header */}
+        <div className="text-center fade-up opacity-0 translate-y-10 transition-all duration-1000">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-coral-600 mb-12">
+            Why I Choose to Shoot Film
+          </h1>
+        </div>
+
         {/* Block 1 */}
         <div className="text-center fade-up opacity-0 translate-y-10 transition-all duration-1000">
           <h2 className="text-4xl md:text-5xl font-script text-coral-600 mb-6">
