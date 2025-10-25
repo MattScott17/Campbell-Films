@@ -39,7 +39,7 @@ export default function WhyFilmSection() {
 
         {/* Block 1 */}
         <div className="text-center fade-up opacity-0 translate-y-10 transition-all duration-1000">
-          <h2 className="text-4xl md:text-5xl font-script text-coral-600 mb-6">
+          <h2 className="text-4xl md:text-4xl font-script text-sage-600 mb-6">
             It Feels Different
           </h2>
           <p className="text-lg md:text-xl leading-relaxed text-olive-800 max-w-3xl mx-auto">
@@ -50,7 +50,7 @@ export default function WhyFilmSection() {
 
         {/* Block 2 */}
         <div className="md:text-left text-center fade-up opacity-0 translate-y-10 transition-all duration-1000 delay-200">
-          <h2 className="text-4xl md:text-5xl font-script text-coral-600 mb-6">
+          <h2 className="text-4xl md:text-4xl font-script text-sage-600 mb-6">
             The In-Between Moments
           </h2>
           <p className="text-lg md:text-xl leading-relaxed text-olive-800 max-w-3xl mx-auto">
@@ -62,7 +62,7 @@ export default function WhyFilmSection() {
 
         {/* Block 3 */}
         <div className="text-center fade-up opacity-0 translate-y-10 transition-all duration-1000 delay-300">
-          <h2 className="text-4xl md:text-5xl font-script text-coral-600 mb-6">
+          <h2 className="text-4xl md:text-4xl font-script text-sage-600 mb-6">
             Super 8 Magic & 35mm Beauty
           </h2>
           <p className="text-lg md:text-xl leading-relaxed italic text-olive-700 max-w-3xl mx-auto">
@@ -74,7 +74,7 @@ export default function WhyFilmSection() {
 
         {/* Block 4 */}
         <div className="md:text-right text-center fade-up opacity-0 translate-y-10 transition-all duration-1000 delay-500">
-          <h2 className="text-4xl md:text-5xl font-script text-coral-600 mb-6">
+          <h2 className="text-4xl md:text-4xl font-script text-sage-600 mb-6">
             Authentically You
           </h2>
           <p className="text-lg md:text-xl leading-relaxed text-olive-800 max-w-3xl mx-auto">

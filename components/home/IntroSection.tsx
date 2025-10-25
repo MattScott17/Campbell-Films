@@ -26,13 +26,13 @@ export default function IntroSection() {
           </div>
 
           {/* Left Section - Photo */}
-          <div className="relative aspect-[3/4] bg-peach-200 rounded-sm overflow-hidden order-2 md:order-1 md:w-4/5">
+          <div className="relative aspect-square rounded-sm overflow-hidden order-2 md:order-1 md:w-[100%]">
             <Image
-              src="/images/Hiimzoepic.JPG"
+              src="/images/Hiimzoepic.png"
               alt="Zoe Campbell - Film Photographer and Videographer"
               fill
-              sizes="(max-width: 768px) 100vw, 27vw"
-              className="object-cover scale-125"
+              sizes="(max-width: 1500px) 200vw, 50vw"
+              className="object-cover"
             />
           </div>
         </div>

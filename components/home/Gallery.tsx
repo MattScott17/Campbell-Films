@@ -8,7 +8,7 @@ export default function Gallery() {
     { id: 4, src: "/images/lifestyle/Lifestyle_15.JPG", alt: "Nostalgic film photography lifestyle session" },
     { id: 5, src: "/images/lifestyle/Lifestyle_21.JPG", alt: "Timeless film photography by Campbell Films" },
     { id: 6, src: "/images/lifestyle/Lifestyle_28.JPG", alt: "Natural light film photography lifestyle portraits" },
-    { id: 7, src: "/images/lifestyle/Lifestyle_31.JPG", alt: "Analog photography capturing real moments and emotions" },
+    { id: 7, src: "/images/lifestyle/Lifestyle_30.JPG", alt: "Analog photography capturing real moments and emotions" },
     { id: 8, src: "/images/lifestyle/Lifestyle_35.JPG", alt: "Authentic film photography lifestyle moments" }
   ];
 

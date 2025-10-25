@@ -29,7 +29,7 @@ export default function BucketListSection() {
             {destinations.map((destination, index) => (
               <div
                 key={index}
-                className="bg-peach-100 p-4 rounded-sm border border-sage-200 hover:border-coral-400 transition-colors text-center"
+                className="bg-sage-100 p-4 rounded-sm border border-sage-200 hover:border-coral-400 transition-colors text-center"
               >
                 <p className="text-olive-800 font-medium text-xl">
                   {destination}
