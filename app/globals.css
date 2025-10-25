@@ -39,4 +39,11 @@
   .animate-fade-in {
     animation: fade-in 1s ease-out;
   }
+
+  .film-grain {
+    background-image: url("/images/filmgrain.png");
+    opacity: 0.08;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
 }

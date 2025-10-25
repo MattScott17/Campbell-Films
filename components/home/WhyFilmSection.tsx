@@ -1,48 +1,82 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
 export default function WhyFilmSection() {
-  const reasons = [
-    {
-      title: "It Feels Different",
-      text: "There's something about film that just feels different. It's warm, dreamy, and honest in a way that brings you right back to the moment.",
-    },
-    {
-      title: "The In-Between Moments",
-      text: "Film loves the in-between moments. The way you looked at each other when you thought no one was watching. Your mom fixing your veil. That burst of laughter during cocktail hour.",
-    },
-    {
-      title: "Super8 Magic",
-      text: "Super8 has this beautiful, nostalgic quality, like watching home movies from another era, but it's your story.",
-    },
-    {
-      title: "35mm Beauty",
-      text: "35mm film gives your photos a timeless look with warm, vibrant, and true to life colors.",
-    },
-    {
-      title: "Authentically You",
-      text: "I'm there to capture it all as it naturally unfolds, staying out of the way so you can be fully present. What you get is a collection of images and films that feel alive, real, and unmistakably yours.",
-    },
-  ];
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const elements = sectionRef.current?.querySelectorAll(".fade-up");
+    elements?.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-serif text-coral-600 mb-16 text-center">
-          Why Super8 / Film?
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {reasons.map((reason, index) => (
-            <div
-              key={index}
-              className="space-y-4"
-            >
-              <h3 className="text-2xl font-serif text-burntOrange-600">
-                {reason.title}
-              </h3>
-              <p className="text-olive-700 leading-relaxed">
-                {reason.text}
-              </p>
-            </div>
-          ))}
+    <section
+      ref={sectionRef}
+      className="bg-gradient-to-b from-peach-50 via-peach-100 to-sage-50 py-28 px-6 text-olive-900 overflow-hidden"
+    >
+      <div className="max-w-5xl mx-auto space-y-32">
+
+        {/* Block 1 */}
+        <div className="text-center fade-up opacity-0 translate-y-10 transition-all duration-1000">
+          <h2 className="text-4xl md:text-5xl font-script text-coral-600 mb-6">
+            It Feels Different
+          </h2>
+          <p className="text-lg md:text-xl leading-relaxed text-olive-800 max-w-3xl mx-auto">
+            There’s something about film that just feels different. It’s warm,
+            dreamy, and honest in a way that brings you right back to the moment.
+          </p>
         </div>
+
+        {/* Block 2 */}
+        <div className="md:text-left text-center fade-up opacity-0 translate-y-10 transition-all duration-1000 delay-200">
+          <h2 className="text-4xl md:text-5xl font-script text-coral-600 mb-6">
+            The In-Between Moments
+          </h2>
+          <p className="text-lg md:text-xl leading-relaxed text-olive-800 max-w-3xl mx-auto">
+            Film loves the in-between moments — the way you looked at each other
+            when you thought no one was watching. Your mom fixing your veil.
+            That burst of laughter during cocktail hour.
+          </p>
+        </div>
+
+        {/* Block 3 */}
+        <div className="text-center fade-up opacity-0 translate-y-10 transition-all duration-1000 delay-300">
+          <h2 className="text-4xl md:text-5xl font-script text-coral-600 mb-6">
+            Super 8 Magic & 35mm Beauty
+          </h2>
+          <p className="text-lg md:text-xl leading-relaxed italic text-olive-700 max-w-3xl mx-auto">
+            Super 8 has this beautiful, nostalgic quality — like watching home
+            movies from another era, but it’s your story. 35mm film gives your
+            photos a timeless look with warm, vibrant, true-to-life colors.
+          </p>
+        </div>
+
+        {/* Block 4 */}
+        <div className="md:text-right text-center fade-up opacity-0 translate-y-10 transition-all duration-1000 delay-500">
+          <h2 className="text-4xl md:text-5xl font-script text-coral-600 mb-6">
+            Authentically You
+          </h2>
+          <p className="text-lg md:text-xl leading-relaxed text-olive-800 max-w-3xl mx-auto">
+            I’m there to capture it all as it naturally unfolds, staying out of
+            the way so you can be fully present. What you get is a collection of
+            images and films that feel alive, real, and unmistakably yours.
+          </p>
+        </div>
+
       </div>
     </section>
   );
