@@ -54,7 +54,7 @@ export default function PortfolioGallery({ category }: PortfolioGalleryProps) {
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
           aria-label={video.alt}
         >
           <source src={video.src} type="video/mp4" />
