@@ -4,7 +4,7 @@ export default function BucketListSection() {
   const destinations = [
     "Iceland",
     "Australia",
-    "Ireland",
+    "South Africa",
     "Portugal",
     "Maine",
     "Indonesia",
