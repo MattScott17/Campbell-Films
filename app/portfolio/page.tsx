@@ -1,17 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import PortfolioGallery from "@/components/PortfolioGallery";
 
 export default function PortfolioPage() {
   const [activeTab, setActiveTab] = useState<"wedding" | "lifestyle">("wedding");
+  const [lifestyleImages, setLifestyleImages] = useState<{ id: number; src: string; alt: string }[]>([]);
 
-  const lifestyleImages = Array.from({ length: 36 }, (_, i) => ({
-    id: i + 1,
-    src: `/images/lifestyle/Lifestyle_${i + 1}.JPG`,
-    alt: `Film photography lifestyle portrait ${i + 1} - Campbell Films Southern California`,
-  }));
+  useEffect(() => {
+    fetch('/api/lifestyle-images')
+      .then((res) => res.json())
+      .then((data) => setLifestyleImages(data));
+  }, []);
 
   return (
     <div className="pt-24 pb-20 px-6">
