@@ -1,18 +1,22 @@
 "use client";
 
 import Image from 'next/image';
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 interface PortfolioGalleryProps {
   category: "wedding" | "lifestyle";
 }
 
 export default function PortfolioGallery({ category }: PortfolioGalleryProps) {
-  const lifestyleImages = Array.from({ length: 37 }, (_, i) => ({
-    id: i + 1,
-    src: `/images/lifestyle/Lifestyle_${i + 1}.JPG`,
-    alt: `Film photography lifestyle portrait ${i + 1} - Campbell Films Southern California`,
-  }));
+  const [lifestyleImages, setLifestyleImages] = useState<{ id: number; src: string; alt: string }[]>([]);
+
+  useEffect(() => {
+    if (category === 'lifestyle') {
+      fetch('/api/lifestyle-images')
+        .then((res) => res.json())
+        .then((data) => setLifestyleImages(data));
+    }
+  }, [category]);
 
   const weddingVideos = [
     { id: 1, src: "/videos/wedding/WeddingMovie_3.mp4", alt: "Super 8 wedding film by Campbell Films" },

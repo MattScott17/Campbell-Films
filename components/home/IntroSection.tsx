@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function IntroSection() {
   return (
-    <section className="py-20 px-12">
+    <section className="py-20 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           {/* Middle and Right Section - Text */}
@@ -26,7 +26,7 @@ export default function IntroSection() {
           </div>
 
           {/* Left Section - Photo */}
-          <div className="relative aspect-square rounded-sm overflow-hidden order-2 md:order-1 md:w-[100%]">
+          <div className="relative aspect-square rounded-sm overflow-hidden order-2 md:order-1 w-full mx-auto md:w-full">
             <Image
               src="/images/Hiimzoepic.png"
               alt="Zoe Campbell - Film Photographer and Videographer"

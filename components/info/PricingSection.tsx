@@ -16,7 +16,7 @@ export default function PricingSection() {
   const packages: Package[] = [
     {
       name: "Engagements",
-      price: "$1,500",
+      price: "$1,350",
       description: "Perfect for intimate celebrations",
       features: [
         "Super 8 Film + 35mm film photos",
@@ -25,38 +25,40 @@ export default function PricingSection() {
         "Film photo gallery",
       ],
       addons: [
-        { name: "Just film photos", price: "$850" },
-        { name: "Just Super 8", price: "$950" },
+        { name: "Just film photos", price: "$650" },
+        { name: "Just Super 8", price: "$750" },
       ],
     },
     {
       name: "Elopements",
-      price: "$3,200",
+      price: "$4,200",
       description: "Your intimate day, beautifully captured",
       features: [
         "Super 8 + 35mm film photos",
+        "Second shooter included",
         "4 hours of coverage",
         "Highlight video reel",
         "Film photo gallery",
       ],
       addons: [
-        { name: "Just film photos", price: "$1,300" },
+        { name: "Just film photos", price: "$2,000" },
         { name: "Just Super 8", price: "$2,200" },
       ],
       featured: true,
     },
     {
       name: "Weddings",
-      price: "$6,400",
+      price: "$7,200",
       description: "Full-day storytelling on film",
       features: [
         "Super 8 + 35mm film photos",
+        "Second shooter included",
         "10 hours of full-day coverage",
         "Highlight video",
         "Film photo gallery",
       ],
       addons: [
-        { name: "Just film photos", price: "$2,700" },
+        { name: "Just film photos", price: "$3,400" },
         { name: "Just Super 8", price: "$3,800" },
       ],
     },
@@ -142,7 +144,7 @@ export default function PricingSection() {
                     pkg.featured ? "text-peach-100" : "text-burntOrange-600"
                   }`}
                 >
-                  Add-ons
+                  Individual
                 </h4>
                 <ul className="space-y-2">
                   {pkg.addons.map((addon, idx) => (
