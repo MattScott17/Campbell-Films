@@ -27,8 +27,8 @@ export default function PortfolioPage() {
               onClick={() => setActiveTab("wedding-films")}
               className={`px-8 py-3 rounded-sm font-medium uppercase text-sm tracking-wide transition-colors ${
                 activeTab === "wedding-films"
-                  ? "bg-coral-500 text-peach-50"
-                  : "text-olive-700 hover:text-coral-500"
+                  ? "bg-olive-500 text-peach-50"
+                  : "text-olive-700 hover:text-olive-500"
               }`}
             >
               Wedding Films
@@ -37,8 +37,8 @@ export default function PortfolioPage() {
               onClick={() => setActiveTab("wedding-photos")}
               className={`px-8 py-3 rounded-sm font-medium uppercase text-sm tracking-wide transition-colors ${
                 activeTab === "wedding-photos"
-                  ? "bg-coral-500 text-peach-50"
-                  : "text-olive-700 hover:text-coral-500"
+                  ? "bg-olive-500 text-peach-50"
+                  : "text-olive-700 hover:text-olive-500"
               }`}
             >
               Wedding Photos
@@ -47,8 +47,8 @@ export default function PortfolioPage() {
               onClick={() => setActiveTab("lifestyle")}
               className={`px-8 py-3 rounded-sm font-medium uppercase text-sm tracking-wide transition-colors ${
                 activeTab === "lifestyle"
-                  ? "bg-coral-500 text-peach-50"
-                  : "text-olive-700 hover:text-coral-500"
+                  ? "bg-olive-500 text-peach-50"
+                  : "text-olive-700 hover:text-olive-500"
               }`}
             >
               Lifestyle
@@ -62,7 +62,7 @@ export default function PortfolioPage() {
         )}
         {activeTab === "wedding-photos" && (
           <div className="flex flex-col items-center justify-center py-20">
-            <p className="text-5xl md:text-7xl font-serif text-coral-600">Coming Soon</p>
+            <p className="text-5xl md:text-7xl font-serif text-olive-500">Coming Soon</p>
           </div>
         )}
         {activeTab === "lifestyle" && (

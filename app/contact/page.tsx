@@ -61,13 +61,13 @@ export default function ContactPage() {
                 or send me an email and from there you tell me a little about your
                 story, your day, and what you want it to feel like.
               </p>
-              <p className="font-medium text-coral-600">
+              <p className="font-medium text-dustyBlue-500">
                 I&apos;ll be in touch soon
               </p>
             </div>
 
             <div className="pt-8 border-t border-sage-200">
-              <h3 className="text-xl font-serif text-coral-600 mb-4">
+              <h3 className="text-4xl font-serif text-olive-500 mb-4">
                 Contact Information
               </h3>
               <div className="space-y-2">
@@ -89,7 +89,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="bg-sage-50 p-8 rounded-sm">
+          <div className="bg-sage-300/40 p-8 rounded-sm">
             <ContactForm />
           </div>
         </div>

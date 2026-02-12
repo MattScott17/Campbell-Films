@@ -66,7 +66,7 @@ export default function PricingSection() {
 
   return (
     <section className="mb-20">
-      <h2 className="text-4xl font-serif text-coral-600 mb-4 text-center">
+      <h2 className="text-4xl font-serif text-olive-500 mb-4 text-center">
         Packages
       </h2>
       <p className="text-center text-olive-700 mb-12 max-w-2xl mx-auto">
@@ -80,20 +80,20 @@ export default function PricingSection() {
             key={index}
             className={`rounded-sm p-8 transition-transform hover:scale-105 ${
               pkg.featured
-                ? "bg-coral-500 text-peach-50 shadow-lg"
+                ? "bg-olive-500 text-peach-50 shadow-lg"
                 : "bg-sage-50 border border-sage-200"
             }`}
           >
             <h3
-              className={`text-3xl font-serif mb-2 ${
-                pkg.featured ? "text-peach-50" : "text-coral-600"
+              className={`text-5xl font-serif mb-2 ${
+                pkg.featured ? "text-peach-50" : "text-olive-500"
               }`}
             >
               {pkg.name}
             </h3>
             <div
               className={`text-4xl font-bold mb-4 ${
-                pkg.featured ? "text-peach-50" : "text-burntOrange-600"
+                pkg.featured ? "text-mustard-500" : "text-mustard-500"
               }`}
             >
               {pkg.price}
@@ -141,7 +141,7 @@ export default function PricingSection() {
               >
                 <h4
                   className={`text-sm font-semibold uppercase tracking-wide mb-3 ${
-                    pkg.featured ? "text-peach-100" : "text-burntOrange-600"
+                    pkg.featured ? "text-peach-100" : "text-olive-500"
                   }`}
                 >
                   Individual

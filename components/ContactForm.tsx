@@ -53,7 +53,7 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="name"
-          className="block text-sm font-medium text-olive-700 mb-2"
+          className="block text-lg font-medium text-olive-700 mb-2"
         >
           Name *
         </label>
@@ -71,7 +71,7 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="email"
-          className="block text-sm font-medium text-olive-700 mb-2"
+          className="block text-lg font-medium text-olive-700 mb-2"
         >
           Email *
         </label>
@@ -89,7 +89,7 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="phone"
-          className="block text-sm font-medium text-olive-700 mb-2"
+          className="block text-lg font-medium text-olive-700 mb-2"
         >
           Phone
         </label>
@@ -106,7 +106,7 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="message"
-          className="block text-sm font-medium text-olive-700 mb-2"
+          className="block text-lg font-medium text-olive-700 mb-2"
         >
           Message *
         </label>
@@ -143,7 +143,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full bg-coral-500 text-peach-50 py-4 rounded-sm hover:bg-coral-600 transition-colors font-medium tracking-wide uppercase text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-olive-500 text-peach-50 py-3 rounded-sm hover:bg-olive-600 transition-colors font-medium tracking-wide text-xl disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {status === "submitting" ? "Sending..." : "Send Message"}
       </button>
