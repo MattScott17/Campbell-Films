@@ -12,6 +12,7 @@ interface DoodleProps {
   rotation?: number;
   opacity?: number;
   hideOnMobile?: boolean;
+  hideOnDesktop?: boolean;
 }
 
 export default function Doodle({
@@ -26,6 +27,7 @@ export default function Doodle({
   rotation = 0,
   opacity = 0.8,
   hideOnMobile = true,
+  hideOnDesktop = false,
 }: DoodleProps) {
   const positionStyles: React.CSSProperties = {
     position: "absolute",
@@ -39,7 +41,10 @@ export default function Doodle({
     zIndex: 10,
   };
 
-  const containerClasses = hideOnMobile ? "hidden md:block" : "block";
+  let containerClasses = "block";
+  if (hideOnMobile && hideOnDesktop) containerClasses = "hidden";
+  else if (hideOnMobile) containerClasses = "hidden md:block";
+  else if (hideOnDesktop) containerClasses = "block md:hidden";
 
   return (
     <div className={containerClasses} style={positionStyles}>
