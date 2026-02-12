@@ -5,9 +5,8 @@ import Image from "next/image";
 import PortfolioGallery from "@/components/PortfolioGallery";
 
 export default function PortfolioPage() {
-  const [activeTab, setActiveTab] = useState<"wedding" | "lifestyle">("wedding");
+  const [activeTab, setActiveTab] = useState<"wedding-films" | "wedding-photos" | "lifestyle">("wedding-films");
   const [lifestyleImages, setLifestyleImages] = useState<{ id: number; src: string; alt: string }[]>([]);
-
   useEffect(() => {
     fetch('/api/lifestyle-images')
       .then((res) => res.json())
@@ -17,7 +16,7 @@ export default function PortfolioPage() {
   return (
     <div className="pt-24 pb-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-5xl md:text-6xl font-serif text-coral-600 mb-12 text-center">
+        <h1 className="text-5xl md:text-6xl font-serif text-softBrown-500 mb-12 text-center">
           Portfolio
         </h1>
 
@@ -25,14 +24,24 @@ export default function PortfolioPage() {
         <div className="flex justify-center mb-12">
           <div className="inline-flex bg-sage-100 rounded-sm p-1">
             <button
-              onClick={() => setActiveTab("wedding")}
+              onClick={() => setActiveTab("wedding-films")}
               className={`px-8 py-3 rounded-sm font-medium uppercase text-sm tracking-wide transition-colors ${
-                activeTab === "wedding"
+                activeTab === "wedding-films"
                   ? "bg-coral-500 text-peach-50"
                   : "text-olive-700 hover:text-coral-500"
               }`}
             >
-              Wedding
+              Wedding Films
+            </button>
+            <button
+              onClick={() => setActiveTab("wedding-photos")}
+              className={`px-8 py-3 rounded-sm font-medium uppercase text-sm tracking-wide transition-colors ${
+                activeTab === "wedding-photos"
+                  ? "bg-coral-500 text-peach-50"
+                  : "text-olive-700 hover:text-coral-500"
+              }`}
+            >
+              Wedding Photos
             </button>
             <button
               onClick={() => setActiveTab("lifestyle")}
@@ -48,9 +57,15 @@ export default function PortfolioPage() {
         </div>
 
         {/* Gallery */}
-        {activeTab === "wedding" ? (
+        {activeTab === "wedding-films" && (
           <PortfolioGallery category="wedding" />
-        ) : (
+        )}
+        {activeTab === "wedding-photos" && (
+          <div className="flex flex-col items-center justify-center py-20">
+            <p className="text-5xl md:text-7xl font-serif text-coral-600">Coming Soon</p>
+          </div>
+        )}
+        {activeTab === "lifestyle" && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {lifestyleImages.map((image) => (
               <div

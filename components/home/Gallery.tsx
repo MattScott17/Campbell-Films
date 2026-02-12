@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export default function Gallery() {
   const images = [
-    { id: 1, src: "/images/lifestyle/Lifestyle_3.JPG", alt: "Film photography lifestyle portrait - Campbell Films" },
+    { id: 1, src: "/images/recentwork_1.jpeg", alt: "Film photography lifestyle portrait - Campbell Films" },
     { id: 2, src: "/images/lifestyle/Lifestyle_36.JPG", alt: "Candid lifestyle photography captured on 35mm film" },
-    { id: 3, src: "/images/lifestyle/Lifestyle_12.JPG", alt: "Authentic moments captured on film - Southern California photographer" },
-    { id: 4, src: "/images/lifestyle/Lifestyle_15.JPG", alt: "Nostalgic film photography lifestyle session" },
-    { id: 5, src: "/images/lifestyle/Lifestyle_21.JPG", alt: "Timeless film photography by Campbell Films" },
-    { id: 6, src: "/images/lifestyle/Lifestyle_28.JPG", alt: "Natural light film photography lifestyle portraits" },
-    { id: 7, src: "/images/lifestyle/Lifestyle_30.JPG", alt: "Analog photography capturing real moments and emotions" },
-    { id: 8, src: "/images/lifestyle/Lifestyle_35.JPG", alt: "Authentic film photography lifestyle moments" }
+    { id: 3, src: "/images/recentwork_2.jpeg", alt: "Authentic moments captured on film - Southern California photographer" },
+    { id: 4, src: "/images/recentwork_3.jpeg", alt: "Nostalgic film photography lifestyle session" },
+    { id: 5, src: "/images/recentwork_4.jpeg", alt: "Timeless film photography by Campbell Films" },
+    { id: 6, src: "/images/recentwork_5.jpeg", alt: "Natural light film photography lifestyle portraits" },
+    { id: 7, src: "/images/lifestyle/Lifestyle_43.JPG", alt: "Analog photography capturing real moments and emotions" },
+    { id: 8, src: "/images/lifestyle/Lifestyle_45.JPG", alt: "Authentic film photography lifestyle moments" }
   ];
 
   return (
