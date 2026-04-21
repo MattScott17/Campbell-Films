@@ -6,6 +6,11 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   const dir = path.join(process.cwd(), "public/images/wedding-photos");
+
+  if (!fs.existsSync(dir)) {
+    return NextResponse.json([]);
+  }
+
   const files = fs
     .readdirSync(dir)
     .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file))
