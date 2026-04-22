@@ -8,10 +8,14 @@ import Doodle from "@/components/Doodle";
 export default function PortfolioPage() {
   const [activeTab, setActiveTab] = useState<"wedding-films" | "wedding-photos" | "lifestyle">("wedding-films");
   const [lifestyleImages, setLifestyleImages] = useState<{ id: number; src: string; alt: string }[]>([]);
+  const [weddingPhotos, setWeddingPhotos] = useState<{ id: number; src: string; alt: string }[]>([]);
   useEffect(() => {
     fetch('/api/lifestyle-images')
       .then((res) => res.json())
       .then((data) => setLifestyleImages(data));
+    fetch('/api/wedding-photos')
+      .then((res) => res.json())
+      .then((data) => setWeddingPhotos(data));
   }, []);
 
   return (
@@ -150,8 +154,20 @@ export default function PortfolioPage() {
           <PortfolioGallery category="wedding" />
         )}
         {activeTab === "wedding-photos" && (
-          <div className="flex flex-col items-center justify-center py-20">
-            <p className="text-5xl md:text-7xl font-serif text-olive-500">Coming Soon</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {weddingPhotos.map((image) => (
+              <div
+                key={image.id}
+                className="aspect-[4/5] bg-peach-200 rounded-sm overflow-hidden group cursor-pointer relative"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            ))}
           </div>
         )}
         {activeTab === "lifestyle" && (
