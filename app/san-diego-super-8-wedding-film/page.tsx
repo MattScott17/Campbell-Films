@@ -350,21 +350,21 @@ export default function SanDiegoSuper8WeddingFilmPage() {
                 iconW: 80,
                 iconH: 64,
                 title: "It Feels Like a Memory",
-                body: "Super 8 has a warmth and texture that instantly feels nostalgic. The moment you watch it back, it already feels like something you&apos;ve treasured for years. No digital video achieves that — not even close.",
+                body: "Super 8 has a warmth and texture that instantly feels nostalgic. The moment you watch it back, it already feels like something you've treasured for years. No digital video achieves that — not even close.",
               },
               {
                 icon: "/images/doodles/CampbellFilms_Icon_Bells.png",
                 iconW: 70,
                 iconH: 64,
                 title: "Real Film, Real Light",
-                body: "Super 8 is shot on actual motion picture film, developed in a lab, and scanned frame by frame. San Diego&apos;s golden coastal light makes it sing — the colors are rich, the grain is beautiful, and every frame looks like a painting.",
+                body: "Super 8 is shot on actual motion picture film, developed in a lab, and scanned frame by frame. San Diego's golden coastal light makes it sing — the colors are rich, the grain is beautiful, and every frame looks like a painting.",
               },
               {
                 icon: "/images/doodles/CampbellFilms_Icon_WineGlass.png",
                 iconW: 50,
                 iconH: 72,
                 title: "Something to Hand Down",
-                body: "This isn&apos;t a video you watch once and forget. A Super 8 wedding film is the kind of thing your children will watch, and their children after them. It&apos;s a home movie in the truest sense.",
+                body: "This isn't a video you watch once and forget. A Super 8 wedding film is the kind of thing your children will watch, and their children after them. It's a home movie in the truest sense.",
               },
             ].map((item) => (
               <div key={item.title} className="text-center space-y-5">
@@ -381,10 +381,9 @@ export default function SanDiegoSuper8WeddingFilmPage() {
                 <h3 className="text-2xl font-serif text-olive-700">
                   {item.title}
                 </h3>
-                <p
-                  className="text-olive-600 leading-loose text-sm"
-                  dangerouslySetInnerHTML={{ __html: item.body }}
-                />
+                <p className="text-olive-600 leading-loose text-sm">
+                  {item.body}
+                </p>
               </div>
             ))}
           </div>
@@ -471,7 +470,7 @@ export default function SanDiegoSuper8WeddingFilmPage() {
                   {pkg.name}
                 </p>
                 <p className="text-peach-50 text-5xl font-serif">{pkg.price}</p>
-                <p className="text-peach-200/60 text-lg leading-snug">
+                <p className="text-peach-200/60 text-base leading-snug">
                   {pkg.desc}
                 </p>
               </div>

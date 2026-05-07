@@ -244,7 +244,7 @@ export default function SanDiegoWeddingPhotographyPage() {
               </h2>
             </div>
             <div className="w-12 h-px bg-coral-300" />
-            <p className="text-olive-700 leading-loose text-xl">
+            <p className="text-olive-700 leading-loose text-base">
               Hi, I&apos;m Zoe — a San Diego wedding photographer and Super 8 filmmaker.
               I shoot on film because it forces me to slow down and find the moments
               that actually matter.
@@ -381,7 +381,7 @@ export default function SanDiegoWeddingPhotographyPage() {
               </h2>
             </div>
             <div className="w-12 h-px bg-coral-300" />
-            <p className="text-olive-700 leading-loose text-xl">
+            <p className="text-olive-700 leading-loose text-base">
               Golden coastal light nearly year-round. From La Jolla cliffs to
               Temecula vineyards — San Diego is one of the finest places in the
               world to shoot on film.
@@ -511,7 +511,7 @@ export default function SanDiegoWeddingPhotographyPage() {
                   {pkg.name}
                 </p>
                 <p className="text-peach-50 text-5xl font-serif">{pkg.price}</p>
-                <p className="text-peach-200/60 text-lg leading-snug">
+                <p className="text-peach-200/60 text-base leading-snug">
                   {pkg.desc}
                 </p>
               </div>
@@ -548,7 +548,7 @@ export default function SanDiegoWeddingPhotographyPage() {
           <div className="space-y-0">
             {faqs.map((faq, i) => (
               <div key={i} className="border-t border-sage-200 py-8 last:border-b">
-                <h3 className="text-olive-800 font-medium text-lg mb-3 leading-snug">
+                <h3 className="text-olive-800 font-medium text-base mb-3 leading-snug">
                   {faq.question}
                 </h3>
                 <p className="text-olive-500 leading-loose text-base">{faq.answer}</p>
@@ -586,7 +586,7 @@ export default function SanDiegoWeddingPhotographyPage() {
             Let&apos;s capture your San Diego love story
           </h2>
           <div className="w-12 h-px bg-sage-500 mx-auto" />
-          <p className="text-peach-200/80 leading-loose text-xl">
+          <p className="text-peach-200/80 leading-loose text-base">
             Dates fill quickly — send a message to check availability.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
