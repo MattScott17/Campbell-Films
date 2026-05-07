@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Campbell Films" }],
   creator: "Campbell Films",
   verification: {
-    google: 'googlece56fa77bbd35982',
+    google: 'ce56fa77bbd35982',
   },
   openGraph: {
     type: 'website',
