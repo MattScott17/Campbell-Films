@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   keywords: ["Super 8 film", "wedding videography", "film photography", "35mm photography", "Southern California wedding photographer", "San Diego wedding videographer", "analog photography", "film wedding", "elopement photography", "destination wedding"],
   authors: [{ name: "Campbell Films" }],
   creator: "Campbell Films",
+  verification: {
+    google: 'googlece56fa77bbd35982',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
