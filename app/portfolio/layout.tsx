@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: '/OpenGraphImage_CF.png',
+        url: '/OpenGraphImage_CF.jpg',
         width: 1200,
         height: 630,
         alt: 'Campbell Films Portfolio',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Portfolio | Campbell Films",
     description: "View our Super 8 wedding films and 35mm film photography. Nostalgic, timeless imagery capturing real moments and emotions.",
-    images: ['/OpenGraphImage_CF.png'],
+    images: ['/OpenGraphImage_CF.jpg'],
   },
   alternates: {
     canonical: "https://filmsbycampbell.com/portfolio",

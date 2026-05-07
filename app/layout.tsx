@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: 'Nostalgic Super 8 films and 35mm photography capturing the real, in-between moments of your wedding day. Based in San Diego, available for travel.',
     images: [
       {
-        url: '/OpenGraphImage_CF.png',
+        url: '/OpenGraphImage_CF.jpg',
         width: 1200,
         height: 630,
         alt: 'Campbell Films',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Campbell Films | Super 8 & Film Wedding Photography in Southern California',
     description: 'Nostalgic Super 8 films and 35mm photography capturing the real, in-between moments of your wedding day. Based in San Diego, available for travel.',
-    images: ['/OpenGraphImage_CF.png'],
+    images: ['/OpenGraphImage_CF.jpg'],
   },
   icons: {
     icon: [

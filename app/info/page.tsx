@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: '/OpenGraphImage_CF.png',
+        url: '/OpenGraphImage_CF.jpg',
         width: 1200,
         height: 630,
         alt: 'Campbell Films Pricing',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pricing & Packages | Campbell Films",
     description: "Wedding and elopement photography packages starting at $1,500. Super 8 film and 35mm photography for couples in Southern California and destination weddings.",
-    images: ['/OpenGraphImage_CF.png'],
+    images: ['/OpenGraphImage_CF.jpg'],
   },
   alternates: {
     canonical: "https://filmsbycampbell.com/info",
