@@ -1,23 +1,10 @@
 "use client";
 
-import { useRef, useEffect } from 'react';
-
 export default function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(error => {
-        console.log("Video autoplay failed:", error);
-      });
-    }
-  }, []);
-
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden z-10 bg-black">
       {/* Video Background */}
       <video
-        ref={videoRef}
         autoPlay
         loop
         muted
