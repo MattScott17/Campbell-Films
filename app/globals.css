@@ -40,6 +40,25 @@
     animation: fade-in 1s ease-out;
   }
 
+  /* Sideways photo rows: scroll without a visible scrollbar */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Shoot page: briefly highlight the photo someone tapped on the Portfolio page */
+  @keyframes photo-hit {
+    0%, 60% { outline-color: #b5973f; }
+    100% { outline-color: transparent; }
+  }
+  .shoot-photo:target img {
+    outline: 3px solid transparent;
+    outline-offset: 3px;
+    animation: photo-hit 2.4s ease-out;
+  }
+
   .film-grain {
     background-image: url("/images/filmgrain.png");
     opacity: 0.08;

@@ -200,3 +200,28 @@ Private - All Rights Reserved
 ## Contact
 
 For questions about this website, contact the developer or Zoe at Campbell Films.
+
+## Adding a wedding shoot
+
+The Wedding Photos tab on the Portfolio page shows weddings one shoot at a time. Computers see one big photo with a sideways row of smaller ones; phones see a cover you can swipe through. Each shoot also gets its own page at `/portfolio/<slug>`.
+
+1. Make a folder for the shoot in `public/images/shoots/`, named like `nora-and-sam`, and put the photos in it. They show in filename order, so naming them `01.jpg`, `02.jpg` and so on keeps them in the order you want. Around 2000px on the long side is plenty.
+2. Open `data/shoots.ts` and add an entry near the top of the list:
+
+   ```ts
+   {
+     slug: "nora-and-sam",
+     names: "Nora & Sam",
+     kind: "Elopement",          // title reads "Nora & Sam's Elopement"
+     place: "Coronado",          // optional
+     date: "June 2026",          // optional
+     note: "One or two sentences about the day.",
+     folder: "shoots/nora-and-sam",
+     cover: "01.jpg",            // optional, defaults to the first photo
+     coverFocus: "center 30%",   // optional, where to aim the crop on phones
+   },
+   ```
+
+3. Commit and push. The shoot shows on the Portfolio page in list order and gets its own page and sitemap entry.
+
+Entries marked `placeholder: true` are examples. They show on preview links but never on the live site. Delete them once real shoots are in.

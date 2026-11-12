@@ -4,12 +4,20 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import Doodle from "@/components/Doodle";
+import WeddingShoots from "@/components/shoots/WeddingShoots";
+import type { Shoot } from "@/lib/shoots";
 
 export default function PortfolioPage() {
   const [activeTab, setActiveTab] = useState<"wedding-films" | "wedding-photos" | "lifestyle">("wedding-films");
   const [lifestyleImages, setLifestyleImages] = useState<{ id: number; src: string; alt: string }[]>([]);
   const [weddingPhotos, setWeddingPhotos] = useState<{ id: number; src: string; alt: string }[]>([]);
+  const [shoots, setShoots] = useState<Shoot[]>([]);
   useEffect(() => {
+    // Shoot pages link back with #wedding-photos so visitors land on the right tab.
+    if (window.location.hash === "#wedding-photos") setActiveTab("wedding-photos");
+    fetch('/api/wedding-shoots')
+      .then((res) => res.json())
+      .then((data) => setShoots(data));
     fetch('/api/lifestyle-images')
       .then((res) => res.json())
       .then((data) => setLifestyleImages(data));
@@ -153,7 +161,8 @@ export default function PortfolioPage() {
         {activeTab === "wedding-films" && (
           <PortfolioGallery category="wedding" />
         )}
-        {activeTab === "wedding-photos" && (
+        {activeTab === "wedding-photos" && shoots.length > 0 && <WeddingShoots shoots={shoots} />}
+        {activeTab === "wedding-photos" && shoots.length === 0 && (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {weddingPhotos.map((image) => (
               <div
